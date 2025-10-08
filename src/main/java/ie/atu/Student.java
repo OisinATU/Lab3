@@ -33,5 +33,10 @@ public class Student {
     }
 
 
+    // Override toString
+    @Override
+    public String toString() {
+        return "Student{name='" + name + "', email='" + email + "', course='" + course + "'}";
+    }
 
 }

@@ -33,7 +33,11 @@ public class StudentApp {
             i++;
         }
 
-
+        System.out.println("Student List:");
+        for (Student s : students) {
+            // TODO: print name, email, course using getters
+            System.out.println(s);
+        }
 
     }
 }
