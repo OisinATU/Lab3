@@ -20,8 +20,27 @@ public class StudentApp {
             // TODO: prompt for name, email, course using sc.nextLine()
             System.out.print("Please enter the name of the student: ");
             String name = sc.nextLine();
-            System.out.print("Please enter the email of the student: ");
-            String email = sc.nextLine();
+
+            String email;
+
+            while(true) {
+                System.out.print("Please enter the email of the student: ");
+                email = sc.nextLine();
+
+                boolean exists = false;
+
+                for (Student s : students) {
+                    if (s.getEmail().equals(email)) {
+                        System.out.println("Email already exists!");
+                        exists = true;
+                        break;
+                    }
+                }
+                if (!exists) {
+                    break;
+                }
+            }
+
             System.out.print("Please enter the course of the student: ");
             String course = sc.nextLine();
 
